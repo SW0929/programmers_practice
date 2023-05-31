@@ -5,34 +5,32 @@ class funDev {
 }
 
 fun main() {
-    val intArray = arrayListOf(93, 30, 55)
-    val speeds = arrayListOf(1, 30, 5)
-    solution(intArray, speeds)
+    val intArray = intArrayOf(93, 30, 55)
+    val speeds = intArrayOf(1, 30, 5)
+    print(solution(intArray, speeds).contentToString())
 }
 
-fun solution(progresses: ArrayList<Int>, speeds: ArrayList<Int>): ArrayList<Int> {
-    var answer = arrayListOf<Int>()
-    var release = 1
-    var i = 0
-    while (progresses.isNotEmpty()){
+fun solution(progresses: IntArray, speeds: IntArray): IntArray {
+    var answer = mutableListOf<Int>()
+    var maxProgress = 0
+    var count = 0
 
-            progresses[i] += speeds[i]
-            if (i == 0){
-                answer.add(release)
-                release = 1
-            }else{
-                if (progresses[i] >= 100){
-                    release++
-                    progresses.remove(i)
-                    speeds.remove(i)
-                }
+    for (i in progresses.indices) {
+        val remainingProgress = 100 - progresses[i]
+        val days = remainingProgress / speeds[i] + if (remainingProgress % speeds[i] > 0) 1 else 0
+
+        if (days > maxProgress) {
+            if (count > 0) {
+                answer.add(count)
+                count = 0
             }
-        if (i == progresses.size){
-            i == 0
+            maxProgress = days
         }
 
+        count++
     }
 
+    answer.add(count)
 
-    return answer
+    return answer.toIntArray()
 }
