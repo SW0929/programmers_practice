@@ -3,7 +3,7 @@ package practice_Kotlin
 class count_up {
 }
 fun main(){
-    println(solution3(3,10).contentToString())
+    println(solution4(3,10).contentToString())
 }
 fun solution3(start: Int, end: Int): IntArray {
     var answer: IntArray = intArrayOf()
@@ -12,3 +12,4 @@ fun solution3(start: Int, end: Int): IntArray {
     }
     return answer
 }
+fun solution4(start: Int, end: Int): IntArray = (start..end).toList().toIntArray()
