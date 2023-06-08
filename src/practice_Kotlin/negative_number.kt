@@ -8,10 +8,18 @@ fun main(){
 }
 fun solution2(num_list: IntArray): Int {
     var answer: Int = -1
-    num_list.forEach {
-        if (it < 0){
-            answer = num_list.indexOf(it)
-        }
+    val a: List<Int>
+    a = num_list.filter { it < 0 }
+    answer = if (a.isEmpty()){
+        -1
+    }else{
+        num_list.indexOf(a[0])
     }
+    return answer
+}
+fun solution3(num_list: IntArray): Int {
+    var answer: Int = -1
+
+    for (i in num_list.indices)
     return answer
 }
