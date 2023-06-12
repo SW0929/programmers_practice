@@ -4,9 +4,9 @@ class int_spiral {
 }
 fun main(){
     val n = 4
-    println(solution(n))
+    println(intSpiralSolution(n))
 }
-fun solution(n: Int): Array<IntArray> {
+fun intSpiralSolution(n: Int): Array<IntArray> {
     var answer: Array<IntArray> = arrayOf<IntArray>()
     var count = 1
 

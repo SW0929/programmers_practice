@@ -5,10 +5,10 @@ class elements_intervals {
 }
 fun main(){
     val intArray = intArrayOf(4,2,6,1,7,6)
-    println(solution01(intArray, 2).contentToString())
-    println(solution02(intArray, 2))
+    println(elementsIntervalsSolution01(intArray, 2).contentToString())
+    println(elementsIntervalsSolution02(intArray, 2))
 }
-fun solution01(num_list: IntArray, n: Int): IntArray {
+fun elementsIntervalsSolution01(num_list: IntArray, n: Int): IntArray {
     var answer: IntArray = intArrayOf()
 
     for(i in num_list.indices step n){
@@ -17,4 +17,4 @@ fun solution01(num_list: IntArray, n: Int): IntArray {
     return answer
 }
 
-fun solution02(num_list: IntArray, n: Int) = (num_list.indices step n).map { num_list[it] }
+fun elementsIntervalsSolution02(num_list: IntArray, n: Int) = (num_list.indices step n).map { num_list[it] }

@@ -6,10 +6,10 @@ class elements_mul_sum {
 }
 fun main(){
     val intArray = intArrayOf(3,4,5,2,1)
-    println(solution(intArray))
+    println(elementsMulSumSolution(intArray))
 }
 
-fun solution(num_list: IntArray): Int {
+fun elementsMulSumSolution(num_list: IntArray): Int {
     var answer: Int = 0
     var mul = 1
     num_list.forEach { mul *= it }

@@ -7,10 +7,10 @@ class funDev {
 fun main() {
     val intArray = intArrayOf(93, 30, 55)
     val speeds = intArrayOf(1, 30, 5)
-    print(solution(intArray, speeds).contentToString())
+    print(funDevSolution(intArray, speeds).contentToString())
 }
 
-fun solution(progresses: IntArray, speeds: IntArray): IntArray {
+fun funDevSolution(progresses: IntArray, speeds: IntArray): IntArray {
     var answer = mutableListOf<Int>()
     var maxProgress = 0
     var count = 0

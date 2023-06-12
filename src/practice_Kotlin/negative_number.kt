@@ -4,9 +4,9 @@ class negative_number {
 }
 fun main(){
     val intArray = intArrayOf(12, 4, 15, 46, 38, -2, 15)
-    println(solution2(intArray))
+    println(negativeNumberSolution01(intArray))
 }
-fun solution2(num_list: IntArray): Int {
+fun negativeNumberSolution01(num_list: IntArray): Int {
     var answer: Int = -1
     val a: List<Int>
     a = num_list.filter { it < 0 }
@@ -17,7 +17,7 @@ fun solution2(num_list: IntArray): Int {
     }
     return answer
 }
-fun solution3(num_list: IntArray): Int {
+fun negativeNumberSolution02(num_list: IntArray): Int {
     var answer: Int = -1
 
     for (i in num_list.indices){

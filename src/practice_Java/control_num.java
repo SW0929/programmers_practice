@@ -2,10 +2,10 @@ package practice_Java;
 
 public class control_num {
     public static void main(String[] args) {
-        System.out.println(solution(0, "wsdawsdassw"));
-        System.out.println(solution2(0, "wsdawsdassw"));
+        System.out.println(controlNumSolution01(0, "wsdawsdassw"));
+        System.out.println(controlNumSolution02(0, "wsdawsdassw"));
     }
-    public static int solution(int n, String control) {
+    public static int controlNumSolution01(int n, String control) {
         int answer = 0;
         for (int i = 0; i < control.length(); i++){
 
@@ -30,7 +30,7 @@ public class control_num {
         answer = n;
         return answer;
     }
-    public static int solution2(int n, String control) {
+    public static int controlNumSolution02(int n, String control) {
         int answer = n;
         for (char ch : control.toCharArray()){
             switch (ch){
