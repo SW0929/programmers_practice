@@ -58,3 +58,19 @@ fun solution(arr: IntArray, n: Int) = arr.mapIndexed { index, num ->
         num + if ((arr.size + index) % 2 == 1) n else 0
     }
 */
+
+// 꼬리 문자열
+/*
+fun solution(str_list: Array<String>, ex: String): String {
+        var answer: String = ""
+        str_list.forEach{
+            if(!it.contains(ex)){
+                answer+=it
+            }
+        }
+        return answer
+    }
+
+fun solution(str_list: Array<String>, ex: String) = 
+    str_list.filter{!it.contains(ex)}.joinToString("")
+*/
