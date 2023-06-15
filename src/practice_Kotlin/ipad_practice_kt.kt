@@ -37,3 +37,24 @@ fun solution02(arr: IntArray): IntArray {
         return answer.toIntArray()
     }
 */
+
+// 배열의 길이에 따라 다른 연산하기
+/*
+fun solution(arr: IntArray, n: Int): IntArray {
+        var answer: IntArray = intArrayOf()
+        if(arr.size % 2 != 0){
+            for(i in 0..arr.size step 2){
+                arr[i] += n
+            }
+        }else{
+            for(i in 1..arr.size step 2){
+                arr[i] += n
+            }
+        }
+        return arr
+    }
+// arr 길이가 짝수(홀수)일때 인덱스 홀수(짝수)의 값에 넣기 때문에 가능함
+fun solution(arr: IntArray, n: Int) = arr.mapIndexed { index, num ->
+        num + if ((arr.size + index) % 2 == 1) n else 0
+    }
+*/
