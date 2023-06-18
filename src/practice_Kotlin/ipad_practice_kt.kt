@@ -81,3 +81,29 @@ fun solution(num_list: IntArray) = num_list.sorted().slice(0..4)
 
 fun solution(num_list: IntArray) = num_list.sorted().take(5)
 */
+
+//홀수 vs 짝수
+/*
+fun solution(num_list: IntArray): Int {
+        var answer: Int = 0
+        var a = 0
+        var b = 0
+        for(i in num_list.indices){
+            if(i % 2 == 0){
+                a+= num_list[i]
+            }else{
+                b+= num_list[i]
+            }
+        }
+        println(a)
+        println(b)
+        answer = if(a >= b) a else b
+        return answer
+}
+
+fun solution(num_list: IntArray) = 
+    max(
+            num_list.filterIndexed { i, v -> i % 2 == 0}.sum(),
+            num_list.filterIndexed { i, v -> i % 2 == 1}.sum()
+)
+*/
