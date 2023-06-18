@@ -74,3 +74,10 @@ fun solution(str_list: Array<String>, ex: String): String {
 fun solution(str_list: Array<String>, ex: String) = 
     str_list.filter{!it.contains(ex)}.joinToString("")
 */
+
+//뒤에서 5등까지
+/*
+fun solution(num_list: IntArray) = num_list.sorted().slice(0..4)
+
+fun solution(num_list: IntArray) = num_list.sorted().take(5)
+*/
