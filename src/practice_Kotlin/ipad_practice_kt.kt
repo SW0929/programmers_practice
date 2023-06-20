@@ -107,3 +107,20 @@ fun solution(num_list: IntArray) =
             num_list.filterIndexed { i, v -> i % 2 == 1}.sum()
 )
 */
+
+//할 일 목록
+/*
+fun solution(todo_list: Array<String>, finished: BooleanArray): Array<String> {
+        var answer: Array<String> = arrayOf<String>()
+        for(i in finished.indices){
+            if(finished[i] == false){
+                answer = answer.plus(todo_list[i])
+            }
+        }
+        return answer
+}
+
+fun solution(todo_list: Array<String>, finished: BooleanArray) = todo_list.filterIndexed{i, v -> finished[i].not()}.toTypedArray()
+*/
+
+//
