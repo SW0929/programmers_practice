@@ -123,4 +123,11 @@ fun solution(todo_list: Array<String>, finished: BooleanArray): Array<String> {
 fun solution(todo_list: Array<String>, finished: BooleanArray) = todo_list.filterIndexed{i, v -> finished[i].not()}.toTypedArray()
 */
 
-//
+//순서 바꾸기
+/*
+fun solution(num_list: IntArray, n: Int) = 
+    num_list.drop(n) + num_list.take(n)
+
+fun solution(numList: IntArray, n: Int) = (numList + numList).copyOfRange(n, n + numList.size)
+
+*/
