@@ -3,7 +3,6 @@ package practice_Kotlin
 class ipad_practice_kt {
 }
 fun main(){
-
 }
 // 카운트 다운
 /*
@@ -107,3 +106,4 @@ fun solution(num_list: IntArray) =
             num_list.filterIndexed { i, v -> i % 2 == 1}.sum()
 )
 */
+
