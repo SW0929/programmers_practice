@@ -19,3 +19,5 @@ public int solution(int[] arr, int idx) {
 }
 */
 
+//몸살 이슈
+
