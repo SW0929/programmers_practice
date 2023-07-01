@@ -22,3 +22,5 @@ public int solution(int[] arr, int idx) {
 //몸살 이슈
 
 //코로나 이슈로 못하는중
+
+//빨리 집가고싶다
