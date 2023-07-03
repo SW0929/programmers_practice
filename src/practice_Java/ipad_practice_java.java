@@ -18,11 +18,3 @@ public int solution(int[] arr, int idx) {
         return answer;
 }
 */
-
-//몸살 이슈
-
-//코로나 이슈로 못하는중
-
-//빨리 집가고싶다
-
-//내일 집 가냐?
