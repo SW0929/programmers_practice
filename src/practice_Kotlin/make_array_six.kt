@@ -25,7 +25,7 @@ fun makeArraySixSolution(arr: IntArray): IntArray {
     }
     return answer.toIntArray()
 }
-fun makeArraySixSolution02(arr: IntArray): IntArray {
+fun makeArraySixSolution02(arr: IntArray): Stack<Int> {
     val stk = Stack<Int>()
 
     for (i in arr.indices) {
