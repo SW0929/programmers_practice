@@ -18,3 +18,4 @@ public int solution(int[] arr, int idx) {
         return answer;
 }
 */
+//해시 공부중
