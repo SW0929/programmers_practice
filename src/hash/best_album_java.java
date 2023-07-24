@@ -1,8 +1,6 @@
 package hash;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class best_album_java {
     public static void main(String[] args) {
@@ -10,29 +8,60 @@ public class best_album_java {
         int[] plays = {500, 600, 150, 800, 2500};
         System.out.println(Arrays.toString(bestAlbumSolution(genres, plays)));
     }
+    static class Music{
+        String genre;
+        int play;
+        int idx;
+        public Music(String genre, int play, int idx){
+            this.genre = genre;
+            this.play = play;
+            this.idx = idx;
+        }
+    }
     public static int[] bestAlbumSolution(String[] genres, int[] plays) {
-        int[] answer = {};
-        //장르 별 총 재생시간 HashMap
+
+        //장르 별 총 재생횟수 HashMap
         HashMap<String, Integer> hm = new HashMap<>();
-        //고유번호, 장르
-        HashMap<Integer, String> hmGenres = new HashMap<>();
-        //고유번호, 재생 시간
-        HashMap<Integer, Integer> hmPlays = new HashMap<>();
-        //장르 종류
-        HashSet<String> hs = new HashSet<>();
 
         for (int i = 0; i < genres.length; i++){
             hm.put(genres[i], hm.getOrDefault(genres[i], 0) + plays[i]);
-            hmGenres.put(i, genres[i]);
-            hmPlays.put(i, plays[i]);
-            hs.add(genres[i]);
         }
 
-        System.out.println(hm);
-        System.out.println(hmGenres);
-        System.out.println(hmPlays);
-        System.out.println(hs);
-
+        // 장르 선정
+        ArrayList<String> arrayList = new ArrayList<>();
+        while (hm.size() != 0){
+            int max = -1;
+            String max_key = "";
+            for (String key : hm.keySet()){
+                int tmp_cnt = hm.get(key);
+                if (tmp_cnt > max){
+                    max = tmp_cnt;
+                    max_key = key;
+                }
+            }
+            arrayList.add(max_key);
+            hm.remove(max_key);
+        }
+        //장르 내 노래 선정
+        ArrayList<Music> result = new ArrayList<>();
+        for (String gern : arrayList){
+            ArrayList<Music> list = new ArrayList<>();
+            for (int i = 0; i < genres.length; i++){
+                if (genres[i].equals(gern)){
+                    list.add(new Music(gern, plays[i], i));
+                }
+            }
+            Collections.sort(list, (o1, o2) -> o2.play - o1.play); //내림차순 sort
+            result.add(list.get(0)); //최소 1개 수록
+            if (list.size() >= 2){ //노래 2개 이상인 경우
+                result.add(list.get(1));
+            }
+        }
+        //결과
+        int[] answer = new int[result.size()];
+        for (int i = 0; i < result.size(); i++){
+            answer[i] = result.get(i).idx;
+        }
         return answer;
     }
 }
