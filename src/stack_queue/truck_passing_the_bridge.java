@@ -19,7 +19,7 @@ public class truck_passing_the_bridge {
         //모든 트럭이 다리를 지난 경우 반복문 종료.
         while (stack.size() < truck_weights.length){
             total += truck_weights[i];
-            
+
         }
 
         return answer;
