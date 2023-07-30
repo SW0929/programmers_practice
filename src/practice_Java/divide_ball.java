@@ -18,6 +18,7 @@ public class divide_ball {
             answer /= (i + 1);
         }
 
+
         return answer;
     }
 }
