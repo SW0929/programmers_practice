@@ -19,3 +19,4 @@ public int solution(int[] arr, int idx) {
 }
 */
 //해시 공부중
+// issue
