@@ -67,6 +67,8 @@ public class truck_passing_the_bridge {
                 moveQ.offer(t);
             }
         }
+
+
         return answer;
     }
 }
