@@ -41,6 +41,7 @@ public class truck_passing_the_bridge {
             이동 트럭이 없을 경우 대기 중인 트럭 객체를 가져옴
             이동 트럭 큐에 삽입
              */
+
             if (moveQ.isEmpty()){
                 Truck t = waitQ.poll();
                 curWeight += t.weight;
