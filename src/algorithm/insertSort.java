@@ -37,6 +37,7 @@ public class insertSort {
         System.out.println(Arrays.toString(array));
     }
 }
+
 /*
 1. 최초 왼쪽 끝의 숫자는 정렬이 끝났다고 가정
 2. 정렬되지 않은 나머지 숫자 중 왼쪽 끝의 숫자를 정렬이 끝난 숫자와 비교하여 왼쪽 숫자가 크면 바꿈
